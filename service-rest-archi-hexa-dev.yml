@@ -1,37 +1,4 @@
-spring:
-  application:
-    name: service-rest-archi-hexa
-  profiles: dev,prod
-  cloud:
-    config:
-      enabled: true
-      discovery:
-        enabled: true
-        service-id: service-config
-    discovery:
-      enabled: true
-  main:
-    banner-mode: off
-  profiles:
-    active:
-    - dev
-  
 server:
   port: 8002
   servlet:
     context-path: /
-    
-management:
-  endpoints:
-    web:
-      exposure:
-        include: refresh, health, info
-
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      default-zone: http://localhost:8761/eureka
-  instance:
-    hostname: localhost
